@@ -26,14 +26,16 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 
 # Alias
-Set-Alias -Name vim -Value nvim
+Set-Alias -Name v -Value nvim
 Set-Alias ll ls
 Set-Alias g git
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias -Name touch -Value New-Item
-Set-Alias -Name f -Value far
+Set-Alias tomcaton 'C:\Users\user\Desktop\apache-tomcat\10.0.11\bin\startup.bat'
+Set-Alias tomcatoff 'C:\Users\user\Desktop\apache-tomcat\10.0.11\bin\shutdown.bat'
+
 
 # Utilities
 # which-command
