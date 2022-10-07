@@ -36,6 +36,16 @@ Set-Alias -Name touch -Value New-Item
 Set-Alias tomcaton 'C:\Users\user\Desktop\apache-tomcat\10.0.11\bin\startup.bat'
 Set-Alias tomcatoff 'C:\Users\user\Desktop\apache-tomcat\10.0.11\bin\shutdown.bat'
 
+function go {
+    & 'C:\users\user\appdata\local\jetbrains\toolbox\apps\idea-c\ch-0\213.5744.223\bin\idea64.exe' 
+    & 'C:\Users\user\AppData\Local\Obsidian\Obsidian.exe'
+    & 'C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe'
+    & 'C:\Program Files\Double Commander\doublecmd.exe'
+    & 'C:\Program Files\WindowsApps\5319275A.WhatsAppDesktop_2.2228.14.0_x64__cv1g1gvanyjgm\app\WhatsApp.exe'
+    & 'C:\Program Files\WindowsApps\TelegramMessengerLLP.TelegramDesktop_4.2.4.0_x64__t4vj0pshhgkwm\Telegram.exe'
+    & 'C:\Users\user\AppData\Local\Programs\YouGile\YouGile.exe'
+    & 'C:\Users\user\AppData\Local\Programs\Simplenote\Simplenote.exe'
+}
 
 # Utilities
 # which-command
