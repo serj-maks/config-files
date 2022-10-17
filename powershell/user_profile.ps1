@@ -1,40 +1,26 @@
 Write-Host 'Welcome back'
 Write-Host ''
 
-Import-Module posh-git
-Import-Module oh-my-posh
-$omp_config = Join-Path $PSScriptRoot ".\my.omp.json"
-oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
-
-Import-Module -Name Terminal-Icons
-
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
-# PSReadLine
-Set-PSReadLineOption -EditMode Emacs
-Set-PSReadLineOption -BellStyle None
-Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
-Set-PSReadLineOption -PredictionSource History
-Set-PSReadLineOption -PredictionViewStyle ListView
+# set oh-my-posh default shell
+oh-my-posh init pwsh | Invoke-Expression
 
-# Fzf
-Import-Module PSFzf
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
-
-# Env
-$env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
+# set oh-my-posh config
+oh-my-posh init pwsh --config 'C:/Users/serjmaks/.config/powershell/my.omp.json' | Invoke-Expression
 
 # Alias
-Set-Alias -Name v -Value nvim
+Set-Alias -Name vim -Value nvim
 Set-Alias ll ls
 Set-Alias g git
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias -Name touch -Value New-Item
-Set-Alias tomcaton 'C:\Users\user\Desktop\apache-tomcat\10.0.11\bin\startup.bat'
-Set-Alias tomcatoff 'C:\Users\user\Desktop\apache-tomcat\10.0.11\bin\shutdown.bat'
+Set-Alias -Name f -Value far
+Set-Alias tomcaton 'C:\Users\serjmaks\Desktop\tomcat\apache-tomcat-10.0.26\bin\startup.bat'
+Set-Alias tomcatoff 'C:\Users\serjmaks\Desktop\tomcat\apache-tomcat-10.0.26\bin\shutdown.bat'
 
 function go {
     & 'C:\users\user\appdata\local\jetbrains\toolbox\apps\idea-c\ch-0\213.5744.223\bin\idea64.exe' 
@@ -46,6 +32,22 @@ function go {
     & 'C:\Users\user\AppData\Local\Programs\YouGile\YouGile.exe'
     & 'C:\Users\user\AppData\Local\Programs\Simplenote\Simplenote.exe'
 }
+
+# Terminal-Icons
+Import-Module -Name Terminal-Icons
+
+# z (dir jumper)
+Import-Module -Name z
+
+# PSReadLine
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
+Set-PSReadLineOption -BellStyle None
+
+# PSFzf
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Utilities
 # which-command
