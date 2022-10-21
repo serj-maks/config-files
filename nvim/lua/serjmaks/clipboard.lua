@@ -6,9 +6,9 @@ local is_mac = has "macunix"
 local is_win = has "win32"
 
 if is_mac then
-  require('craftzdog.macos')
+  require('serjmaks.macos')
 end
 if is_win then
-  require('craftzdog.windows')
+  require('serjmaks.windows')
 end
 
