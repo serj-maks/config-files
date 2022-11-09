@@ -1,3 +1,6 @@
+" Map leader to space
+let mapleader=" "
+
 " Instead of Esc button
 inoremap kj <ESC>
 inoremap jk <Esc>
@@ -10,9 +13,3 @@ set clipboard^=unnamed,unnamedplus
 
 " Set the number of context lines you would like to see above and below the cursor
 set scrolloff=7
-
-"" Source your .vimrc
-"source ~/.vimrc
-
-
-"" Find more examples here: https://jb.gg/share-ideavimrc
