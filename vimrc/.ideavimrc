@@ -1,0 +1,28 @@
+" Instead of Esc button
+inoremap kj <ESC>
+inoremap jk <Esc>
+
+" Set the number of context lines you would like to see above and below the cursor
+set scrolloff=7
+
+" Select all
+nmap <C-a> gg<S-v>G
+
+" Use Windows clipboard to copy and to paste
+set clipboard^=unnamed,unnamedplus
+
+"" Source your .vimrc
+" source ~/.vimrc
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+" map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+" map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+"" Find more examples here: https://jb.gg/share-ideavimrc
